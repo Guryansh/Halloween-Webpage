@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="http://ingenioushubs.com/Allhallows/css/font-awesome.min.css" rel="stylesheet">
+    
+    
+    <link href="http://ingenioushubs.com/Allhallows/css/magnific-popup.css" rel="stylesheet">
+    <link href="http://ingenioushubs.com/Allhallows/css/responsive.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Open+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body >
+    <div id="musa-loader" style="display: none;">
+        
+	<div id="loading-center">
+           
+	  <div id="loading-center-absolute">
+                <img src="preloader1.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <!-<div class="background"></div>>
+    <nav class="navbar">
+      <button onclick="toggleMenu()" class="burger"></button>
+      <button class="button">Home</button>
+      <div class="dropdowns">
+        <div class="dropdown">
+          <button class="button">
+            GitHub
+            <img src="chevron.svg" />
+          </button>
+          <div class="dropdown-menu">
+            <button><a href="https://github.com/guryansh" style="color: #fb3f00; text-decoration: none;">Profile</a></button>
+            <button>Web Applications</button>
+            <button>SEO Advice</button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="button">
+            Links
+            <img src="chevron.svg" />
+          </button>
+          <div class="dropdown-menu">
+            <button><a href="http://oldfashionhalloween.blogspot.com/" style="color: #fb3f00; text-decoration: none;">History</a></button>
+            <button><a href="https://spookylittlehalloween.com/" style="color: #fb3f00; text-decoration: none;">Blogs</a></button>
+            <button><a href="https://halloweencollector.com/" style="color: #fb3f00; text-decoration: none;">Collection</a></button>   
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="button">
+            Support
+            <img src="chevron.svg" />
+          </button>
+          <div class="dropdown-menu">
+            <button>Live Chat</button>
+            <button>Send Email</button>
+            <button>Request Help</button>
+          </div>
+        </div>
+      </div>
+      <input type="text" placeholder="Search" class="navbar-search" />
+    </nav>
+    <script>
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+    <button class="navbar-burger" onclick="toggleMenu()"></button>
+    <nav class="menu">
+      <a href="#" style="animation-delay: 0.1s">Home</a>
+      <a href="#" style="animation-delay: 0.2s">About</a>
+      <a href="#" style="animation-delay: 0.3s">Services</a>
+      <a href="#" style="animation-delay: 0.4s">Products</a>
+      <a href="#" style="animation-delay: 0.5s">Contact</a>
+    </nav>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
+   <div class="body-back modal-open"  data-spy="scroll" data-target="#bs-example-navbar-collapse-1"></div>
+   <div class="card"></div>
+   <div class="card">
+    <img src="CARD.jpg" style="width:100%">
+   </div>
+   <div class="card">
+    <img src="bg.png" style="width:100%">
+   </div>
+   <div class="card">
+    <img src="Banner.png" style="width:100%">
+   </div>
+   <div class="card">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a href="#" class="download-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></a>
+                        </div>
+                        <div id="letter5" class="">
+
+                            <div class="letter_inner">
+                                <img src="header-logo.png" class="img-fluid" alt="">
+                                <h2>Sign up for Newsletter</h2>
+                                <p>If you sign up for our newsletter, you will never miss a single news or updates from our website. So, Don't waste a single seconds of time, Sign up now.</p>
+                            </div>
+                            <div class="">
+                                <input type="email" name="email" value="Your E-mail Address Here" onfocus="if(this.value  == 'Your E-mail Address Here') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'Your E-mail Address Here'; } ">
+
+                                <span class="input-group-btn">
+                                    <a href="#" class="button btn-default">Subscribe</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js">
+   </script>
+   <script type="text/javascript">
+    const cards = gsap.utils.toArray(".card");
+    cards.forEach(card => { 
+        const anim = gsap.fromTo(
+            card,
+            {
+                autoAlpha: 0,
+                y: 100,
+                x: -100,
+                rotate: -10
+            },
+            {
+              duration: 1,
+              autoAlpha: 1,
+              y: 0, 
+              x: 0,
+              rotate: 0
+            }
+        );
+        ScrollTrigger.create({
+            trigger: card,
+            animation: anim,
+        });
+    });
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js">
+   </script>
+  </body>
+</html>
